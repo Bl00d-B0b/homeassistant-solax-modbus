@@ -234,6 +234,7 @@ class SolaxModbusButtonEntityDescription(BaseModbusButtonEntityDescription):
 @dataclass(kw_only=True, frozen=True)
 class SolaxModbusNumberEntityDescription(BaseModbusNumberEntityDescription):
     allowedtypes: int = ALLDEFAULT  # maybe 0x0000 (nothing) is a better default choice
+    display_as_box: bool = True  # show all Solax number entities as input boxes, not sliders
 
 
 @dataclass(kw_only=True, frozen=True)
@@ -1770,7 +1771,6 @@ NUMBER_TYPES: Sequence["SolaxModbusNumberEntityDescription"] = [
         entity_category=EntityCategory.CONFIG,
         initvalue=0,
         entity_registry_enabled_default=False,
-        display_as_box=True,
         write_method=WRITE_DATA_LOCAL,
     ),
     SolaxModbusNumberEntityDescription(
@@ -1784,7 +1784,6 @@ NUMBER_TYPES: Sequence["SolaxModbusNumberEntityDescription"] = [
         entity_category=EntityCategory.CONFIG,
         initvalue=100,
         entity_registry_enabled_default=False,
-        display_as_box=True,
         write_method=WRITE_DATA_LOCAL,
     ),
     ###
@@ -2303,7 +2302,6 @@ NUMBER_TYPES: Sequence["SolaxModbusNumberEntityDescription"] = [
         allowedtypes=AC | HYBRID | GEN4 | GEN5 | GEN6,
         entity_category=EntityCategory.CONFIG,
         entity_registry_enabled_default=False,
-        display_as_box=True,
         icon="mdi:ev-station",
     ),
     SolaxModbusNumberEntityDescription(
@@ -2317,7 +2315,6 @@ NUMBER_TYPES: Sequence["SolaxModbusNumberEntityDescription"] = [
         native_step=1,
         allowedtypes=AC | HYBRID | GEN4 | GEN5 | GEN6 | DCB,
         entity_category=EntityCategory.CONFIG,
-        display_as_box=True,
         icon="mdi:connection",
     ),
     SolaxModbusNumberEntityDescription(

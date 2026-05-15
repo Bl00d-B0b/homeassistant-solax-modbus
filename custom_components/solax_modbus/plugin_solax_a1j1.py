@@ -120,6 +120,7 @@ class SolaxA1J1ModbusButtonEntityDescription(BaseModbusButtonEntityDescription):
 @dataclass(kw_only=True, frozen=True)
 class SolaxA1J1ModbusNumberEntityDescription(BaseModbusNumberEntityDescription):
     allowedtypes: int = ALLDEFAULT  # maybe 0x0000 (nothing) is a better default choice
+    display_as_box: bool = True  # show all Solax number entities as input boxes, not sliders
 
 
 @dataclass(kw_only=True, frozen=True)
