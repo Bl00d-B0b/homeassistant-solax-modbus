@@ -2321,7 +2321,7 @@ NUMBER_TYPES: Sequence["SolaxModbusNumberEntityDescription"] = [
         icon="mdi:home-export-outline",
     ),
     SolaxModbusNumberEntityDescription(
-        name="Min SOC",
+        name="Min SoC",
         key="eps_min_soc",
         device_group="eps",
         register=0x44,
@@ -2335,7 +2335,7 @@ NUMBER_TYPES: Sequence["SolaxModbusNumberEntityDescription"] = [
         icon="mdi:battery-charging-low",
     ),
     SolaxModbusNumberEntityDescription(
-        name="Restart SOC",
+        name="Restart SoC",
         key="eps_restart_soc",
         device_group="eps",
         register=0x8E,
@@ -3310,7 +3310,7 @@ SWITCH_TYPES: Sequence["SolaXModbusSwitchEntityDescription"] = [
         icon="mdi:dip-switch",
     ),
     SolaXModbusSwitchEntityDescription(
-        name="Schedule 2",
+        name="Schedule P2",
         key="generator_time_2",
         register=0x104,
         device_group="external_generator",
@@ -3332,7 +3332,7 @@ SWITCH_TYPES: Sequence["SolaXModbusSwitchEntityDescription"] = [
         icon="mdi:dip-switch",
     ),
     SolaXModbusSwitchEntityDescription(
-        name="Schedule 2",
+        name="Schedule P2",
         key="generator_time_2",
         register=0x107,
         device_group="external_generator",
@@ -4478,7 +4478,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         internal=True,
     ),
     SolaXModbusSensorEntityDescription(
-        name="Restart SOC",
+        name="Restart SoC",
         key="eps_restart_soc",
         native_unit_of_measurement=PERCENTAGE,
         device_group="eps",
@@ -4651,7 +4651,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN2 | GEN3 | EPS,
     ),
     SolaXModbusSensorEntityDescription(
-        name="Min SOC",
+        name="Min SoC",
         key="eps_min_soc",
         native_unit_of_measurement=PERCENTAGE,
         device_group="eps",
@@ -8518,7 +8518,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=HYBRID | GEN3 | EPS,
     ),
     SolaXModbusSensorEntityDescription(
-        name="Min Esc SOC",
+        name="Min Esc SoC",
         key="eps_min_esc_soc",
         device_group="eps",
         register=0x10E,
@@ -8808,7 +8808,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         icon="mdi:information",
     ),
     SolaXModbusSensorEntityDescription(
-        name="ActivePower L1",
+        name="Active Power L1",
         key="pm_activepower_l1",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
@@ -8819,7 +8819,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="ActivePower L2",
+        name="Active Power L2",
         key="pm_activepower_l2",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
@@ -8830,7 +8830,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="ActivePower L3",
+        name="Active Power L3",
         key="pm_activepower_l3",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
@@ -8907,7 +8907,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         icon="mdi:current-dc",
     ),
     SolaXModbusSensorEntityDescription(
-        name="Reactive or ApparentPower L1",
+        name="Reactive or Apparent Power L1",
         key="pm_reactive_or_apparentpower_l1",
         native_unit_of_measurement=UnitOfApparentPower.VOLT_AMPERE,
         device_class=SensorDeviceClass.APPARENT_POWER,
@@ -8918,7 +8918,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="Reactive or ApparentPower L2",
+        name="Reactive or Apparent Power L2",
         key="pm_reactive_or_apparentpower_l2",
         native_unit_of_measurement=UnitOfApparentPower.VOLT_AMPERE,
         device_class=SensorDeviceClass.APPARENT_POWER,
@@ -8929,7 +8929,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="Reactive or ApparentPower L3",
+        name="Reactive or Apparent Power L3",
         key="pm_reactive_or_apparentpower_l3",
         native_unit_of_measurement=UnitOfApparentPower.VOLT_AMPERE,
         device_class=SensorDeviceClass.APPARENT_POWER,
@@ -9063,7 +9063,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
     ),
     # PM I2 Inverter
     SolaXModbusSensorEntityDescription(
-        name="I2 ActivePower L1",
+        name="I2 Active Power L1",
         key="pm_i2_activepower_l1",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
@@ -9074,7 +9074,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="I2 ActivePower L2",
+        name="I2 Active Power L2",
         key="pm_i2_activepower_l2",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
@@ -9085,7 +9085,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="I2 ActivePower L3",
+        name="I2 Active Power L3",
         key="pm_i2_activepower_l3",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
@@ -9096,7 +9096,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="I2 Reactive or ApparentPower L1",
+        name="I2 Reactive or Apparent Power L1",
         key="pm_i2_reactive_or_apparentpower_l1",
         native_unit_of_measurement=UnitOfApparentPower.VOLT_AMPERE,
         device_class=SensorDeviceClass.APPARENT_POWER,
@@ -9107,7 +9107,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="I2 Reactive or ApparentPower L2",
+        name="I2 Reactive or Apparent Power L2",
         key="pm_i2_reactive_or_apparentpower_l2",
         native_unit_of_measurement=UnitOfApparentPower.VOLT_AMPERE,
         device_class=SensorDeviceClass.APPARENT_POWER,
@@ -9118,7 +9118,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="I2 Reactive or ApparentPower L3",
+        name="I2 Reactive or Apparent Power L3",
         key="pm_i2_reactive_or_apparentpower_l3",
         native_unit_of_measurement=UnitOfApparentPower.VOLT_AMPERE,
         device_class=SensorDeviceClass.APPARENT_POWER,
@@ -9293,7 +9293,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
     ),
     # PM I3 Inverter
     SolaXModbusSensorEntityDescription(
-        name="I3 ActivePower L1",
+        name="I3 Active Power L1",
         key="pm_i3_activepower_l1",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
@@ -9304,7 +9304,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="I3 ActivePower L2",
+        name="I3 Active Power L2",
         key="pm_i3_activepower_l2",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
@@ -9315,7 +9315,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="I3 ActivePower L3",
+        name="I3 Active Power L3",
         key="pm_i3_activepower_l3",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
@@ -9326,7 +9326,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="I3 Reactive or ApparentPower L1",
+        name="I3 Reactive or Apparent Power L1",
         key="pm_i3_reactive_or_apparentpower_l1",
         native_unit_of_measurement=UnitOfApparentPower.VOLT_AMPERE,
         device_class=SensorDeviceClass.APPARENT_POWER,
@@ -9337,7 +9337,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="I3 Reactive or ApparentPower L2",
+        name="I3 Reactive or Apparent Power L2",
         key="pm_i3_reactive_or_apparentpower_l2",
         native_unit_of_measurement=UnitOfApparentPower.VOLT_AMPERE,
         device_class=SensorDeviceClass.APPARENT_POWER,
@@ -9348,7 +9348,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         allowedtypes=AC | HYBRID | GEN3 | GEN4 | GEN5 | GEN6 | PM,
     ),
     SolaXModbusSensorEntityDescription(
-        name="I3 Reactive or ApparentPower L3",
+        name="I3 Reactive or Apparent Power L3",
         key="pm_i3_reactive_or_apparentpower_l3",
         native_unit_of_measurement=UnitOfApparentPower.VOLT_AMPERE,
         device_class=SensorDeviceClass.APPARENT_POWER,
@@ -11341,7 +11341,7 @@ TIME_TYPES = [
         icon="mdi:clock-end",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Allow Work Start Time",
+        name="Allow Work Start",
         key="generator_start_time_1",
         register=0xE8,
         device_group="external_generator",
@@ -11352,7 +11352,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Allow Work Stop Time",
+        name="Allow Work Stop",
         key="generator_stop_time_1",
         register=0xE9,
         device_group="external_generator",
@@ -11399,7 +11399,7 @@ TIME_TYPES = [
         icon="mdi:clock-end",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Charge Period Start Time",
+        name="Charge P1 Start",
         key="generator_charge_start_time_1",
         register=0x100,
         device_group="external_generator",
@@ -11410,7 +11410,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Charge Period End Time",
+        name="Charge P1 Stop",
         key="generator_charge_stop_time_1",
         register=0x101,
         device_group="external_generator",
@@ -11421,7 +11421,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Allowed Disc Period Start Time",
+        name="Discharge P1 Start",
         key="generator_discharge_start_time_1",
         register=0x102,
         device_group="external_generator",
@@ -11432,7 +11432,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Allowed Disc Period End Time",
+        name="Discharge P1 Stop",
         key="generator_discharge_stop_time_1",
         register=0x103,
         device_group="external_generator",
@@ -11443,7 +11443,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Charge Period 2 Start Time",
+        name="Charge P2 Start",
         key="generator_charge_start_time_2",
         register=0x105,
         device_group="external_generator",
@@ -11454,7 +11454,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Charge Period 2 End Time",
+        name="Charge P2 Stop",
         key="generator_charge_stop_time_2",
         register=0x106,
         device_group="external_generator",
@@ -11465,7 +11465,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Allowed Disc Period 2 Start Time",
+        name="Discharge P2 Start",
         key="generator_discharge_start_time_2",
         register=0x107,
         device_group="external_generator",
@@ -11476,7 +11476,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Allowed Disc Period 2 End Time",
+        name="Discharge P2 Stop",
         key="generator_discharge_stop_time_2",
         register=0x108,
         device_group="external_generator",
@@ -11487,7 +11487,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Charge Period Start Time",
+        name="Charge P1 Start",
         key="generator_charge_start_time_1",
         register=0x103,
         device_group="external_generator",
@@ -11498,7 +11498,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Charge Period End Time",
+        name="Charge P1 Stop",
         key="generator_charge_stop_time_1",
         register=0x104,
         device_group="external_generator",
@@ -11509,7 +11509,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Allowed Disc Period Start Time",
+        name="Discharge P1 Start",
         key="generator_discharge_start_time_1",
         register=0x105,
         device_group="external_generator",
@@ -11520,7 +11520,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Allowed Disc Period End Time",
+        name="Discharge P1 Stop",
         key="generator_discharge_stop_time_1",
         register=0x106,
         device_group="external_generator",
@@ -11531,7 +11531,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Charge Period 2 Start Time",
+        name="Charge P2 Start",
         key="generator_charge_start_time_2",
         register=0x108,
         device_group="external_generator",
@@ -11542,7 +11542,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Charge Period 2 End Time",
+        name="Charge P2 Stop",
         key="generator_charge_stop_time_2",
         register=0x109,
         device_group="external_generator",
@@ -11553,7 +11553,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Allowed Disc Period 2 Start Time",
+        name="Discharge P2 Start",
         key="generator_discharge_start_time_2",
         register=0x10A,
         device_group="external_generator",
@@ -11564,7 +11564,7 @@ TIME_TYPES = [
         icon="mdi:generator-stationary",
     ),
     SolaXModbusTimeEntityDescription(
-        name="Allowed Disc Period 2 End Time",
+        name="Discharge P2 Stop",
         key="generator_discharge_stop_time_2",
         register=0x10B,
         device_group="external_generator",
