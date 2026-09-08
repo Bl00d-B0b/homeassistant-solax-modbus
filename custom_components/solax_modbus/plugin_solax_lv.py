@@ -1691,6 +1691,7 @@ SENSOR_TYPES_MAIN: list[SolaXModbusSensorEntityDescription] = [
         device_class=SensorDeviceClass.POWER_FACTOR,
         register=0x12D,
         scale=0.001,
+        rounding=3,
         register_type=REG_INPUT,
         register_data_type=REGISTER_S16,
         allowedtypes=AC | HYBRID | GEN,
